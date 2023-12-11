@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}
+   List of all blogs
+{% endblock %}
+
+{% block content %}
+
+  <p><a href="/">HOME</a></p>
+
+  <h1> comments name </h1>
+  <ul>
+    {% for x in comments %}
+      <li>{{ x.Content }} {{"|"}}  {{x.Post_ID}}</li>
+    {% endfor %}
+  </ul>
+{% endblock %}
